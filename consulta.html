@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta sobre viajes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url(https://p4.wallpaperbetter.com/wallpaper/425/254/523/dark-nebula-abstract-science-fiction-wallpaper-preview.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: #003366;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 2px solid #00264d;
+    }
+    h1 {
+      color: #c29d1d;
+      font-size: 3em;
+    }
+h2 {
+      color: #c29d1d;
+      font-size: 2em;
+    }
+    .seccion {
+      background-color: rgba(0, 31, 63, 0.9);
+      color: white;
+      padding: 30px;
+      margin: 40px auto;
+      width: 80%;
+      border-radius: 15px;
+    }
+    label {
+      display: block;
+      margin: 20px 0 10px;
+      font-size: 1.2em;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      background-color: #003366;
+      color: #c29d1d;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #66B2FF;
+      color: #00264d;
+    }
+    #mensaje-final {
+      display: none;
+      text-align: center;
+      font-size: 1.4em;
+      color: #d4af37;
+      padding: 30px;
+    }
+    nav {
+      margin: 30px;
+      text-align: center;
+    }
+    .menu-container {
+      background-color: #001933;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+    .menu-container a {
+      color: #c29d1d;
+      text-decoration: none;
+      font-size: 1.3em;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #003366;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .menu-container a:hover {
+      background-color: #66B2FF;
+      color: #00264d;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="menu-container">
+    <a href="paginawe en prigresio.html">Inicio</a>
+    <a href="america.html">América</a>
+    <a href="europa.html">Europa</a>
+    <a href="asia.html">Asia</a>
+    <a href="africa.html">África</a>
+    <a href="consulta.html">Consulta</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Consulta de Viajes</h1>
+  <h2>¡Queremos saber tu opinión!</h2>
+</header>
+
+<div class="seccion" id="formulario-seccion">
+  <form onsubmit="mostrarMensaje(event)">
+    <label for="nombre">1. ¿Cuál es tu destino favorito para vacacionar?</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="actividad">2. ¿Qué actividades disfrutas más cuando viajas?</label>
+    <textarea id="actividad" name="actividad" rows="3"></textarea>
+
+    <label for="pais">3. ¿Qué país te gustaría conocer próximamente?</label>
+    <input type="text" id="pais" name="pais">
+
+    <label for="viaje">4. ¿Prefieres viajar solo/a, en pareja o en grupo?</label>
+    <input type="text" id="viaje" name="viaje">
+
+    <label for="comentario">5. ¿Tienes alguna experiencia de viaje inolvidable que quieras compartir?</label>
+    <textarea id="comentario" name="comentario" rows="4"></textarea>
+
+    <button type="submit">Enviar respuestas</button>
+  </form>
+</div>
+
+<div class="seccion" id="mensaje-final">
+  ¡Gracias por responder! Espero que te hayas divertido .
+</div>
+
+<script>
+  function mostrarMensaje(e) {
+    e.preventDefault();
+    document.getElementById("formulario-seccion").style.display = "none";
+    document.getElementById("mensaje-final").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
